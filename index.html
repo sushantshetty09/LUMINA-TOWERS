@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Lumina Towers: Ultra-luxury 2 BHK residential apartments across 5 floors. Explore interactive floor plans, calculate mortgage rates, and book virtual tours.">
+    <title>Lumina Towers | Premium 2 BHK Luxury Apartments</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-container" id="nav-logo-link">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18M3 10h18M5 21V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v15M9 10h1v4H9zm5 0h1v4h-1z"></path>
+                    </svg>
+                </span>
+                <span class="logo-text">LUMINA <span class="accent-text">TOWERS</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navigation-menu">
+                <a href="#hero" class="nav-link active" id="link-hero">Home</a>
+                <a href="#visualizer" class="nav-link" id="link-visualizer">Floor Selector</a>
+                <a href="#amenities" class="nav-link" id="link-amenities">Amenities</a>
+                <a href="#calculator" class="nav-link" id="link-calculator">Calculator</a>
+                <a href="#gallery" class="nav-link" id="link-gallery">Gallery</a>
+                <a href="#contact" class="nav-link" id="link-contact">Contact</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="#visualizer" class="btn btn-outline btn-sm" id="btn-quick-reserve">View Floorplan</a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer-menu">
+        <nav class="mobile-nav-links">
+            <a href="#hero" class="mobile-nav-link" id="mob-link-hero">Home</a>
+            <a href="#visualizer" class="mobile-nav-link" id="mob-link-visualizer">Floor Selector</a>
+            <a href="#amenities" class="mobile-nav-link" id="mob-link-amenities">Amenities</a>
+            <a href="#calculator" class="mobile-nav-link" id="mob-link-calculator">Calculator</a>
+            <a href="#gallery" class="mobile-nav-link" id="mob-link-gallery">Gallery</a>
+            <a href="#contact" class="mobile-nav-link" id="mob-link-contact">Contact</a>
+            <a href="#visualizer" class="btn btn-gold btn-full mt-4" id="mob-btn-reserve">Explore Residences</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <span class="hero-badge animate-fade-in">EXCLUSIVE RESIDENCES</span>
+                <h1 class="hero-title animate-slide-up" id="main-hero-title">
+                    Elevated Living. <br>
+                    <span class="gradient-text">Unrivaled luxury.</span>
+                </h1>
+                <p class="hero-description animate-slide-up-delay">
+                    A limited collection of 40 exquisite, architectural 2 BHK residences. Designed for those who value privacy, panoramic views, and meticulous craftsmanship.
+                </p>
+                <div class="hero-actions animate-slide-up-delay-2">
+                    <a href="#visualizer" class="btn btn-gold" id="btn-hero-explore">Interactive Floor Map</a>
+                    <a href="#contact" class="btn btn-glass" id="btn-hero-contact">Schedule Private Tour</a>
+                </div>
+            </div>
+            
+            <!-- Quick stats bar -->
+            <div class="hero-stats-bar animate-fade-in-slow">
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Floors of Luxury</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">40</span>
+                    <span class="stat-label">Premium 2 BHKs</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Vastu Compliant</span>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">Premium</span>
+                    <span class="stat-label">Sky Lounge & Pool</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" id="hero-scroll-btn">
+            <span class="mouse-icon">
+                <span class="scroll-wheel"></span>
+            </span>
+            <span class="scroll-text">Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- Interactive Floor Visualizer Section -->
+    <section id="visualizer" class="section-padding visualizer-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">INTERACTIVE EXPLORER</span>
+                <h2 class="section-title">Select Your Sanctuary</h2>
+                <p class="section-subtitle">
+                    Select a floor from the building tower, then choose an individual flat unit to view detailed floor plans, views, pricing, and availability.
+                </p>
+            </div>
+
+            <div class="visualizer-container">
+                <!-- Left: Building Tower Selector -->
+                <div class="building-tower-wrapper">
+                    <h3 class="panel-title">Building Stack</h3>
+                    <div class="building-tower" id="building-tower-stack">
+                        <!-- Generates 5 floors programmatically -->
+                        <button class="floor-btn" data-floor="5" id="floor-trigger-5">
+                            <span class="floor-number">05</span>
+                            <div class="floor-info">
+                                <span class="floor-name">Floor 5 (Penthouse Suites)</span>
+                                <span class="floor-stats">8 Units • 2 BHK Luxury</span>
+                            </div>
+                        </button>
+                        <button class="floor-btn" data-floor="4" id="floor-trigger-4">
+                            <span class="floor-number">04</span>
+                            <div class="floor-info">
+                                <span class="floor-name">Floor 4 (Premium Executive)</span>
+                                <span class="floor-stats">8 Units • 2 BHK Luxury</span>
+                            </div>
+                        </button>
+                        <button class="floor-btn" data-floor="3" id="floor-trigger-3">
+                            <span class="floor-number">03</span>
+                            <div class="floor-info">
+                                <span class="floor-name">Floor 3 (Standard Premium)</span>
+                                <span class="floor-stats">8 Units • 2 BHK Luxury</span>
+                            </div>
+                        </button>
+                        <button class="floor-btn" data-floor="2" id="floor-trigger-2">
+                            <span class="floor-number">02</span>
+                            <div class="floor-info">
+                                <span class="floor-name">Floor 2 (Standard Premium)</span>
+                                <span class="floor-stats">8 Units • 2 BHK Luxury</span>
+                            </div>
+                        </button>
+                        <button class="floor-btn" data-floor="1" id="floor-trigger-1">
+                            <span class="floor-number">01</span>
+                            <div class="floor-info">
+                                <span class="floor-name">Floor 1 (Garden Terrace)</span>
+                                <span class="floor-stats">8 Units • 2 BHK Luxury</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Floor Plan Layout grid of 8 flats -->
+                <div class="floor-plan-wrapper">
+                    <div class="floor-plan-header">
+                        <h3 class="panel-title" id="floor-plan-title">Floor 5 Layout</h3>
+                        <div class="floor-plan-legend">
+                            <span class="legend-item"><span class="legend-dot status-available"></span> Available</span>
+                            <span class="legend-item"><span class="legend-dot status-reserved"></span> Reserved</span>
+                            <span class="legend-item"><span class="legend-dot status-sold"></span> Sold</span>
+                        </div>
+                    </div>
+
+                    <!-- Floor Grid -->
+                    <div class="floor-layout-grid" id="floor-layout-container">
+                        <!-- Generated by app.js: 8 flat cards -->
+                    </div>
+                    
+                    <!-- Quick Flat Info Panel (Hover Preview) -->
+                    <div class="flat-preview-panel" id="flat-preview-card">
+                        <div class="preview-placeholder" id="preview-placeholder-text">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="16" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                            </svg>
+                            <p>Hover or click on any flat unit to inspect features, layout configurations, and price guides.</p>
+                        </div>
+                        <div class="preview-details hidden" id="preview-details-content">
+                            <div class="preview-header">
+                                <div>
+                                    <h4 class="preview-flat-id" id="prev-flat-id">Flat 501</h4>
+                                    <p class="preview-flat-type" id="prev-flat-type">2 BHK Executive Layout</p>
+                                </div>
+                                <span class="status-badge" id="prev-flat-status">Available</span>
+                            </div>
+                            <div class="preview-body-grid">
+                                <div class="preview-stat">
+                                    <span class="stat-val" id="prev-flat-area">1,240 Sq Ft</span>
+                                    <span class="stat-lbl">Super Built-up Area</span>
+                                </div>
+                                <div class="preview-stat">
+                                    <span class="stat-val" id="prev-flat-view">Sunrise Boulevard</span>
+                                    <span class="stat-lbl">Balcony View</span>
+                                </div>
+                                <div class="preview-stat">
+                                    <span class="stat-val" id="prev-flat-price">$385,000</span>
+                                    <span class="stat-lbl">Price Starting From</span>
+                                </div>
+                            </div>
+                            <div class="preview-action-row">
+                                <button class="btn btn-gold btn-sm" id="btn-view-flat-details">View Floor Plan & Enquire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="section-padding amenities-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">WORLD-CLASS AMENITIES</span>
+                <h2 class="section-title">The Art of Elevated Living</h2>
+                <p class="section-subtitle">
+                    Immerse yourself in unparalleled luxury. Lumina Towers features an curated selection of amenities designed to nourish physical health and ease modern minds.
+                </p>
+            </div>
+
+            <div class="amenities-grid">
+                <!-- Amenity 1 -->
+                <div class="amenity-card">
+                    <div class="amenity-image-wrapper">
+                        <img src="images/amenity_pool.jpg" alt="Horizon Infinity Pool" class="amenity-card-image">
+                    </div>
+                    <div class="amenity-card-content">
+                        <div class="amenity-icon">
+                            <!-- Infinity Pool Icon -->
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 6c.6 0 1.2-.2 1.6-.6L5.1 4c.8-.8 2-.8 2.8 0l1.5 1.4c.4.4 1 .6 1.6.6.6 0 1.2-.2 1.6-.6L14.1 4c.8-.8 2-.8 2.8 0l1.5 1.4c.4.4 1 .6 1.6.6H22M2 12c.6 0 1.2-.2 1.6-.6l1.5-1.4c.8-.8 2-.8 2.8 0l1.5 1.4c.4.4 1 .6 1.6.6.6 0 1.2-.2 1.6-.6l1.5-1.4c.8-.8 2-.8 2.8 0l1.5 1.4c.4.4 1 .6 1.6.6H22M2 18c.6 0 1.2-.2 1.6-.6l1.5-1.4c.8-.8 2-.8 2.8 0l1.5 1.4c.4.4 1 .6 1.6.6.6 0 1.2-.2 1.6-.6l1.5-1.4c.8-.8 2-.8 2.8 0l1.5 1.4c.4.4 1 .6 1.6.6H22"></path>
+                            </svg>
+                        </div>
+                        <h3 class="amenity-title">Horizon Infinity Pool</h3>
+                        <p class="amenity-desc">An elevated heated rooftop infinity pool featuring breathtaking 360-degree city views and plush sun lounges.</p>
+                    </div>
+                </div>
+
+                <!-- Amenity 2 -->
+                <div class="amenity-card">
+                    <div class="amenity-image-wrapper">
+                        <img src="images/amenity_lounge.jpg" alt="Rooftop Sky Lounge" class="amenity-card-image">
+                    </div>
+                    <div class="amenity-card-content">
+                        <div class="amenity-icon">
+                            <!-- Sky Lounge -->
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                                <line x1="6" y1="2" x2="6" y2="4"></line>
+                                <line x1="10" y1="2" x2="10" y2="4"></line>
+                                <line x1="14" y1="2" x2="14" y2="4"></line>
+                            </svg>
+                        </div>
+                        <h3 class="amenity-title">Rooftop Sky Lounge</h3>
+                        <p class="amenity-desc">An executive indoor/outdoor club lounge perfect for entertaining guests, working remotely, or enjoying sunset drinks.</p>
+                    </div>
+                </div>
+
+                <!-- Amenity 3 -->
+                <div class="amenity-card">
+                    <div class="amenity-image-wrapper">
+                        <img src="images/amenity_gym.jpg" alt="Wellness Gym & Spa" class="amenity-card-image">
+                    </div>
+                    <div class="amenity-card-content">
+                        <div class="amenity-icon">
+                            <!-- Gym Icon -->
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="4" height="10" rx="1"></rect>
+                                <rect x="18" y="7" width="4" height="10" rx="1"></rect>
+                                <line x1="6" y1="12" x2="18" y2="12"></line>
+                                <line x1="9" y1="9" x2="9" y2="15"></line>
+                                <line x1="15" y1="9" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 class="amenity-title">Wellness Gym & Spa</h3>
+                        <p class="amenity-desc">Fully equipped strength and cardio studio with on-demand digital trainers, steam bath, and massage therapy rooms.</p>
+                    </div>
+                </div>
+
+                <!-- Amenity 4 -->
+                <div class="amenity-card">
+                    <div class="amenity-image-wrapper">
+                        <img src="images/amenity_smarthome.jpg" alt="Smart Home Intelligence" class="amenity-card-image">
+                    </div>
+                    <div class="amenity-card-content">
+                        <div class="amenity-icon">
+                            <!-- Smart Home Automation -->
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                                <path d="m10 9 2-2 2 2M10 11l2 2 2-2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="amenity-title">Smart Home Intelligence</h3>
+                        <p class="amenity-desc">Integrated biometric keyless entry, smart mirrors, smart lighting controls, climate customization, and voice-assisted units.</p>
+                    </div>
+                </div>
+
+                <!-- Amenity 5 -->
+                <div class="amenity-card">
+                    <div class="amenity-image-wrapper">
+                        <img src="images/amenity_parking.jpg" alt="Secure EV Parking" class="amenity-card-image">
+                    </div>
+                    <div class="amenity-card-content">
+                        <div class="amenity-icon">
+                            <!-- Secure Parking -->
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="1" y="3" width="22" height="13" rx="2"></rect>
+                                <path d="M7 16v4M17 16v4"></path>
+                                <circle cx="6" cy="11" r="2"></circle>
+                                <circle cx="18" cy="11" r="2"></circle>
+                                <path d="M10 7h4v4H10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="amenity-title">EV Charging Parking</h3>
+                        <p class="amenity-desc">Three underground floors of secure car parks equipped with EV chargers, number plate recognition, and a carwash bay.</p>
+                    </div>
+                </div>
+
+                <!-- Amenity 6 -->
+                <div class="amenity-card">
+                    <div class="amenity-image-wrapper">
+                        <img src="images/amenity_concierge.jpg" alt="Elite Concierge Desk" class="amenity-card-image">
+                    </div>
+                    <div class="amenity-card-content">
+                        <div class="amenity-icon">
+                            <!-- Concierge Services -->
+                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="5"></circle>
+                                <path d="M3 21c0-4.5 4-8 9-8s9 3.5 9 8"></path>
+                                <path d="M12 13v8"></path>
+                            </svg>
+                        </div>
+                        <h3 class="amenity-title">24/7 Elite Concierge</h3>
+                        <p class="amenity-desc">Dedicated lifestyle managers for booking reservations, receiving parcels, home cleaning services, and arranging travel logistics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Mortgage Calculator Section -->
+    <section id="calculator" class="section-padding calculator-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">FINANCIAL DESIGN</span>
+                <h2 class="section-title">Ownership Calculator</h2>
+                <p class="section-subtitle">
+                    Estimate your monthly investments. Adjust details like purchase price, down payment, loan term, and interest rates to preview your payment schedules.
+                </p>
+            </div>
+
+            <div class="calculator-grid">
+                <!-- Left: Controls -->
+                <div class="calculator-controls card-glass">
+                    <!-- Unit Selector Pre-fill -->
+                    <div class="control-group">
+                        <label for="calc-flat-selector">Select Apartment Unit</label>
+                        <select id="calc-flat-selector" class="form-input">
+                            <option value="custom">Custom Investment Model</option>
+                            <!-- Dynamically populated in JS -->
+                        </select>
+                    </div>
+
+                    <!-- Purchase Price -->
+                    <div class="control-group">
+                        <div class="range-header">
+                            <span>Purchase Price</span>
+                            <span class="range-value" id="val-purchase-price">$350,000</span>
+                        </div>
+                        <input type="range" id="input-purchase-price" class="slider-bar" min="150000" max="600000" step="5000" value="350000">
+                    </div>
+
+                    <!-- Down Payment -->
+                    <div class="control-group">
+                        <div class="range-header">
+                            <span>Down Payment (20%)</span>
+                            <span class="range-value" id="val-down-payment">$70,000</span>
+                        </div>
+                        <input type="range" id="input-down-payment" class="slider-bar" min="30000" max="300000" step="5000" value="70000">
+                    </div>
+
+                    <!-- Interest Rate -->
+                    <div class="control-group">
+                        <div class="range-header">
+                            <span>Interest Rate (Annual)</span>
+                            <span class="range-value" id="val-interest-rate">4.5%</span>
+                        </div>
+                        <input type="range" id="input-interest-rate" class="slider-bar" min="1" max="10" step="0.1" value="4.5">
+                    </div>
+
+                    <!-- Loan Term -->
+                    <div class="control-group">
+                        <div class="range-header">
+                            <span>Loan Duration</span>
+                            <span class="range-value" id="val-loan-term">30 Years</span>
+                        </div>
+                        <input type="range" id="input-loan-term" class="slider-bar" min="5" max="30" step="5" value="30">
+                    </div>
+                </div>
+
+                <!-- Right: Visual Outputs -->
+                <div class="calculator-outputs card-glass">
+                    <div class="payment-circle-wrapper">
+                        <div class="payment-circle">
+                            <span class="monthly-title">Estimated Monthly</span>
+                            <span class="monthly-value" id="calc-monthly-payment">$1,418.69</span>
+                            <span class="monthly-note">Principal & Interest</span>
+                        </div>
+                    </div>
+
+                    <div class="output-stats-list">
+                        <div class="output-stat-item">
+                            <span class="stat-label">Loan Amount Required</span>
+                            <span class="stat-value" id="calc-loan-amount">$280,000</span>
+                        </div>
+                        <div class="output-stat-item">
+                            <span class="stat-label">Total Interest Paid</span>
+                            <span class="stat-value" id="calc-total-interest">$230,729</span>
+                        </div>
+                        <div class="output-stat-item">
+                            <span class="stat-label">Total Outlay (Cost of Loan)</span>
+                            <span class="stat-value" id="calc-total-payment">$510,729</span>
+                        </div>
+                    </div>
+                    <div class="calculator-action">
+                        <button class="btn btn-gold btn-full" id="btn-calc-apply">Submit Application / Request Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">PORTFOLIO</span>
+                <h2 class="section-title">Experience Lumina Towers</h2>
+                <p class="section-subtitle">
+                    Take a visual journey through carefully curated high-resolution photography showcasing the architecture and interior design of our 2 BHK properties.
+                </p>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="gallery-slider-wrapper">
+                <div class="gallery-slides" id="gallery-slides-container">
+                    <!-- Slide 1 -->
+                    <div class="gallery-slide active" data-index="0">
+                        <img src="images/exterior.jpg" alt="Lumina Towers Building Exterior during Sunset">
+                        <div class="slide-caption">
+                            <h3>Lumina Towers Exterior</h3>
+                            <p>5-story masterfully engineered structure with sunset illumination and landscaped green terraces.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="gallery-slide" data-index="1">
+                        <img src="images/living_room.jpg" alt="Luxury Modern Living Room Inside 2 BHK Apartment">
+                        <div class="slide-caption">
+                            <h3>Premium Living Spaces</h3>
+                            <p>Floor-to-ceiling glass panel windows, sleek designer furniture, and elegant warm sunset atmospheres.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="gallery-slide" data-index="2">
+                        <img src="images/bedroom.jpg" alt="Exclusive Bedroom Suite Interior">
+                        <div class="slide-caption">
+                            <h3>Master Bedroom Suites</h3>
+                            <p>Private balcony entrances, built-in ambient lighting, and bespoke textile furnishings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide Buttons -->
+                <button class="slide-nav-btn prev-btn" id="slider-prev-btn" aria-label="Previous Slide">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="slide-nav-btn next-btn" id="slider-next-btn" aria-label="Next Slide">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Indicator dots -->
+                <div class="slider-dots" id="slider-dots-container">
+                    <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+                    <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+                    <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Section -->
+    <section id="contact" class="section-padding contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left: Info -->
+                <div class="contact-info">
+                    <span class="section-badge">SCHEDULE A VISIT</span>
+                    <h2 class="section-title">Ready to Experience it in Person?</h2>
+                    <p class="section-subtitle">
+                        Arrange a private viewing with our premium relations managers or speak with an advisor about options at Lumina Towers.
+                    </p>
+                    
+                    <div class="contact-details-list">
+                        <div class="details-item">
+                            <span class="details-icon">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </span>
+                            <div>
+                                <h4>Experience Center Address</h4>
+                                <p>742 Skyline Boulevard, Luxury District, NY 10022</p>
+                            </div>
+                        </div>
+                        <div class="details-item">
+                            <span class="details-icon">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h4>Direct Sales Line</h4>
+                                <p>+1 (800) 555-0199 / +1 (800) 555-0188</p>
+                            </div>
+                        </div>
+                        <div class="details-item">
+                            <span class="details-icon">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </span>
+                            <div>
+                                <h4>Email Inquiries</h4>
+                                <p>concierge@luminatowers.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-wrapper card-glass">
+                    <h3 class="form-title">Schedule a Tour / Request Quote</h3>
+                    <form id="booking-request-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" class="form-input" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" class="form-input" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-phone">Phone Number</label>
+                                <input type="tel" id="form-phone" class="form-input" placeholder="+1 (555) 123-4567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-unit-interest">Selected Flat Unit</label>
+                                <select id="form-unit-interest" class="form-input">
+                                    <option value="none">General Consultation</option>
+                                    <!-- Populated programmatically -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Special Requests / Preferred Visit Date</label>
+                            <textarea id="form-message" class="form-input" rows="4" placeholder="I would like to request a weekend physical tour and discuss financing options..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-gold btn-full" id="btn-submit-booking">Request Booking Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <span class="logo-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 21h18M3 10h18M5 21V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v15M9 10h1v4H9zm5 0h1v4h-1z"></path>
+                            </svg>
+                        </span>
+                        <span class="logo-text">LUMINA <span class="accent-text">TOWERS</span></span>
+                    </div>
+                    <p class="brand-bio">
+                        Bespoke architectural high-rise apartments setting new standards in luxury real estate, design, and eco-friendly technologies.
+                    </p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-column">
+                        <h4>Navigation</h4>
+                        <a href="#hero">Home</a>
+                        <a href="#visualizer">Floor Selector</a>
+                        <a href="#calculator">Mortgage Tool</a>
+                        <a href="#gallery">Image Gallery</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">RERA Registration</a>
+                        <a href="#">Building Bylaws</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumina Towers Development Group Corp. All Rights Reserved. Designed by Antigravity.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Floor Plan Detail Modal -->
+    <div class="modal-overlay" id="flat-detail-modal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close-trigger" aria-label="Close Modal">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="modal-content-grid">
+                <!-- Left Side: Blueprint Image & Details -->
+                <div class="modal-left">
+                    <div class="modal-header">
+                        <span class="status-badge" id="modal-flat-status">Available</span>
+                        <h3 class="modal-title" id="modal-flat-id">Flat 501</h3>
+                        <p class="modal-subtitle" id="modal-flat-type">2 BHK Luxury Executive</p>
+                    </div>
+                    
+                    <!-- SVG Blueprint Container -->
+                    <div class="blueprint-container" id="blueprint-svg-holder">
+                        <!-- Generated dynamically by app.js (Unique architectural SVG blueprints per layout) -->
+                    </div>
+                    
+                    <div class="blueprint-controls">
+                        <span class="blueprint-label">Interactive Unit Architectural Blueprint</span>
+                    </div>
+                </div>
+
+                <!-- Right Side: Details & Action Form -->
+                <div class="modal-right">
+                    <h4 class="specs-heading">Residence Details</h4>
+                    <div class="modal-specs-list">
+                        <div class="spec-item">
+                            <span class="label">Super Built-up Area</span>
+                            <span class="val" id="modal-flat-area">1,240 Sq Ft</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="label">Carpet Area</span>
+                            <span class="val" id="modal-flat-carpet">1,020 Sq Ft</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="label">Balcony Orientation</span>
+                            <span class="val" id="modal-flat-view">Skyline East</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="label">Pricing Guide</span>
+                            <span class="val text-gold" id="modal-flat-price">$385,000</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="label">Car Parking Spaces</span>
+                            <span class="val">1 Reserved Bay</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="label">BHK Configuration</span>
+                            <span class="val">2 Bedrooms, 2 Bathrooms</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-cta-box" id="modal-cta-actions">
+                        <h4 class="specs-heading">Reserve or Inquire</h4>
+                        <p class="modal-cta-desc">Interested in Flat <span id="modal-flat-id-label">501</span>? Secure this residence by initiating a reservation request or locking in a custom quote.</p>
+                        
+                        <div class="modal-actions-row">
+                            <button class="btn btn-gold btn-full" id="btn-modal-enquire">Enquire Now</button>
+                            <button class="btn btn-outline btn-full" id="btn-modal-calc">Calculate Mortgage</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="notification-toast">
+        <span class="toast-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </span>
+        <span class="toast-message" id="toast-message-text">Request submitted successfully!</span>
+    </div>
+
+    <!-- JavaScript code -->
+    <script src="app.js"></script>
+</body>
+</html>
